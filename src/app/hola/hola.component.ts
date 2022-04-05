@@ -11,5 +11,5 @@ export class HolaComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  today: Date=new Date();
 }
