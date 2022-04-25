@@ -1,0 +1,21 @@
+
+<h3>Lista Servidores</h3>
+<hr>
+Servidor es <app-server [idServer]="1" name="server1" status="On"></app-server>
+<div class="new">
+    <label>Server Name</label>
+    <!-- <input type="text" (input)="onUpdateServerName($event)"> -->
+    <input type="text" 
+        [(ngModel)]="serverName"/>
+    {{serverName}}
+    <button (click)="onCreateServer()" [disabled]="allowNewServer">Add Server</button>
+<p [innerText]="serverCreateStatus"></p>
+</div>
+
+<ul>
+    <li *ngFor="let server of serverList" class="item {{server.status==='On' ? 'activo' : 'inactivo'}}">
+        {{server.name}}-{{server.status}}
+        <button (click)="toggle(server.id)" *ngIf="server.status==='Off'">On</button>
+    </li>
+</ul>
+<div [ngClass]="clasessCss">Fin Lista</div>

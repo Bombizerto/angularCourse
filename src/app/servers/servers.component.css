@@ -1,0 +1,24 @@
+.item{
+    font-size:1.2em;
+    margin:5px;
+}
+.activo{
+    color: green;
+}
+.inactivo{
+    color: brown;
+}
+.uno{
+    background-color: antiquewhite;
+}
+.dos{
+    margin-top: 20px;
+    border: 20px;
+    border:solid;
+    border-color: blue;
+}
+
+.new{
+    border:1px solid blue;
+    padding: 10px;
+}
